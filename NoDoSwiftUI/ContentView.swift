@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var nodo : String = ""
     var body: some View {
-        Text("Hello, World")
+        NavigationView {
+            VStack {
+                HStack(spacing: 5) {
+                    Image(systemName: "plus.circle")
+                        .padding(.leading)
+                    Group {
+                        TextField("type here",text:self.$nodo, onEditingChanged: { (changed) in
+                            print(changed)
+                        }) {
+                            print("commit time")
+                        }.padding(.all, 12)
+                    }.background(Color.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .shadow(radius: 5)
+                        .padding(.trailing, 8)
+                }
+                
+                List {
+                    Text("hai there")
+                }
+            }.navigationBarTitle(Text("NoDo"))
+        }
     }
 }
 
