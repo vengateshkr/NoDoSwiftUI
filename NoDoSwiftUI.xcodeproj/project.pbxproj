@@ -13,6 +13,9 @@
 		2579B0C623FA46DA00E7CC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2579B0C523FA46DA00E7CC1C /* Assets.xcassets */; };
 		2579B0C923FA46DA00E7CC1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2579B0C823FA46DA00E7CC1C /* Preview Assets.xcassets */; };
 		2579B0CC23FA46DA00E7CC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2579B0CA23FA46DA00E7CC1C /* LaunchScreen.storyboard */; };
+		C0A040A023FD7B7400535A2E /* NoDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0409F23FD7B7400535A2E /* NoDo.swift */; };
+		C0A040A223FD7C9C00535A2E /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A040A123FD7C9C00535A2E /* TopView.swift */; };
+		C0A040A423FDA75000535A2E /* NoDoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A040A323FDA75000535A2E /* NoDoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2579B0C823FA46DA00E7CC1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2579B0CB23FA46DA00E7CC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2579B0CD23FA46DA00E7CC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A0409F23FD7B7400535A2E /* NoDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDo.swift; sourceTree = "<group>"; };
+		C0A040A123FD7C9C00535A2E /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		C0A040A323FDA75000535A2E /* NoDoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				2579B0BF23FA46D900E7CC1C /* AppDelegate.swift */,
 				2579B0C123FA46D900E7CC1C /* SceneDelegate.swift */,
 				2579B0C323FA46D900E7CC1C /* ContentView.swift */,
+				C0A0409F23FD7B7400535A2E /* NoDo.swift */,
+				C0A040A123FD7C9C00535A2E /* TopView.swift */,
+				C0A040A323FDA75000535A2E /* NoDoRow.swift */,
 				2579B0C523FA46DA00E7CC1C /* Assets.xcassets */,
 				2579B0CA23FA46DA00E7CC1C /* LaunchScreen.storyboard */,
 				2579B0CD23FA46DA00E7CC1C /* Info.plist */,
@@ -146,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A040A423FDA75000535A2E /* NoDoRow.swift in Sources */,
 				2579B0C023FA46D900E7CC1C /* AppDelegate.swift in Sources */,
+				C0A040A223FD7C9C00535A2E /* TopView.swift in Sources */,
+				C0A040A023FD7B7400535A2E /* NoDo.swift in Sources */,
 				2579B0C223FA46D900E7CC1C /* SceneDelegate.swift in Sources */,
 				2579B0C423FA46D900E7CC1C /* ContentView.swift in Sources */,
 			);
