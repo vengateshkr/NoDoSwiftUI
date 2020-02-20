@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 List {
                     ForEach(self.nodoList) { item in
-                        NoDoRow(nodoItem: item)
+                        NoDoRow(nodoItem: item,nodoList:self.$nodoList)
                     }.onDelete(perform: deleteRow)
                 }
             }.navigationBarTitle("NoDo")
@@ -50,9 +50,15 @@ struct ContentView: View {
             return
         }
         UserDefaults.standard.set(data,forKey: "nodos")
+        UserDefaults.standard.synchronize()
+
     }
 }
-
+struct TopView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 /*
  struct ContentView: View {
  @State var nodo : String = ""

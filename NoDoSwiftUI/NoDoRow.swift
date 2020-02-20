@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
-
+import Combine
 struct NoDoRow: View {
     @State var nodoItem : NoDo
+    @Binding var nodoList : [NoDo]
+
     var body: some View {
         VStack(alignment: .center, spacing: 2) {
             Group {
@@ -36,7 +38,19 @@ struct NoDoRow: View {
             .blur(radius: self.nodoItem.isDone ? 1 : 0)
             .onTapGesture {
                 self.nodoItem.isDone.toggle()
+                if let index = self.nodoList.firstIndex(where: { $0.id == self.nodoItem.id }) {
+                    self.nodoList[index].isDone.toggle()
+                    self.save()
+                }
         }
+    }
+    
+    func save() {
+        guard let data = try? JSONEncoder().encode(self.nodoList) else {
+            return
+        }
+        UserDefaults.standard.set(data,forKey: "nodos")
+        UserDefaults.standard.synchronize()
     }
 }
 

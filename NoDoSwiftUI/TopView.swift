@@ -21,8 +21,8 @@ struct TopView: View {
             ZStack(alignment: .leading) {
                 TextField(placeHolder, text: self.$nodoItem.name) {
                     self.nodoList.insert(NoDo(name: self.nodoItem.name, isDone: false), at: 0)
-                    self.nodoItem.name = ""
                     self.save()
+                    self.nodoItem.name = ""
                 }.padding(.all, 10)
                     .frame(width: UIScreen.main.bounds.width - 50, height: 50)
                     .background(Color.blue)
@@ -51,6 +51,7 @@ struct TopView: View {
             return
         }
         UserDefaults.standard.set(data,forKey: "nodos")
+        UserDefaults.standard.synchronize()
     }
 }
 
